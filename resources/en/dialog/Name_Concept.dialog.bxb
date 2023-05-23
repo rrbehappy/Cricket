@@ -1,0 +1,13 @@
+dialog (Concept) {
+  match {
+    Name (this)
+  }
+  switch (plural(this)) {
+    case (One) {
+      template (name)
+    }
+    default {
+      template (names)
+    }
+  }
+}

@@ -1,0 +1,6 @@
+dialog (Value) {
+  match {
+    Player (player)
+  }
+  template ("[#{value (player.name)}]")
+}

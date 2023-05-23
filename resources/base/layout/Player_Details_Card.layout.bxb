@@ -1,0 +1,28 @@
+layout-macro-def (player-details-card) {
+    params {
+      param (player) {
+        type (Player)
+        min (Required) max (One)
+      }
+    }
+    content {
+      layout {
+        
+        section {
+          content {
+            
+              title-area {
+                  slot1 {
+                    text("[#{value(player.name)}]")
+                  }
+                }
+              
+              
+              paragraph { value ("#{title(concept(player.battingStyle.plural('One')))}: [#{value(player.battingStyle)}]") style (Detail_M) }
+                paragraph { value ("#{title(concept(player.bowlingStyle.plural('One')))}: [#{value(player.bowlingStyle)}]") style (Detail_M) }
+          }
+        }
+
+      }
+    }
+  }

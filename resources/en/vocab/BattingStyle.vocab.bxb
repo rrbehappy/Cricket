@@ -1,0 +1,4 @@
+vocab (BattingStyle){
+    "Right-hand bat"
+    "Left-hand bat"
+}

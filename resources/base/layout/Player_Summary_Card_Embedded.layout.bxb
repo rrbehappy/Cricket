@@ -1,0 +1,31 @@
+layout-macro-def (player-summary-card-embedded) {
+    params {
+        param (player) {
+          type (Player)
+          min (Optional) max (One)
+        }
+        param (titleLabel) {
+          type (viv.core.Text)
+          min (Optional) max (One)
+        }
+      }
+      content {
+        compound-card {
+          content {
+            layout-macro (player-summary-card) {
+              param (player) {
+                expression (player)
+              }
+              param (titleLabel) {
+                expression (titleLabel)
+              }
+            }
+          }
+          on-click {
+            intent {
+              goal: $expr(player) //show details
+            }
+          }
+        }
+      }
+  }

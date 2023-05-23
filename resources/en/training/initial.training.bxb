@@ -1,0 +1,4 @@
+
+train (t-Player) {
+  utterance ([g:Player] Show all players)
+}

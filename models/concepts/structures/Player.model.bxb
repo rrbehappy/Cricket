@@ -1,0 +1,24 @@
+structure (Player) {
+
+  property (name) {
+    type (Name)
+    min(Optional) max(One)
+  }
+  property (imageId) {
+    type (ImageId)
+    min(Optional) max(One)
+  }
+  property (id) {
+    type (Id)
+    min(Optional) max(One)
+  }
+  property (battingStyle) {
+    type (BattingStyle)
+    min(Optional) max(One)
+  }
+  property (bowlingStyle) {
+    type (BowlingStyle)
+    min(Optional) max(One)
+  }
+
+}

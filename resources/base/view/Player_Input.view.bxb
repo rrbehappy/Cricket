@@ -1,0 +1,46 @@
+input-view {
+    match: Player (this)
+
+    render {
+      selection-of (this) {
+          navigation-mode {
+            if ($handsFree) {
+              read-one {
+                with-navigation-conversation-drivers
+                list-summary {
+                  template("#{event (this, 'Result')}")
+                }
+                page-content (page) {
+                  underflow-statement {
+                    template-macro (RESULT_UNDERFLOW_STATEMENT)
+                  }
+                  item-selection-question {
+                    template-macro (ITEM_SELECTION_QUESTION_GENERIC)
+                  }
+                  overflow-statement {
+                    template-macro (RESULT_OVERFLOW_STATEMENT)
+                  }
+                  page-marker {
+                    if (isLastNavPage(page)){
+                      template-macro (PAGE_MARKER_LAST)
+                    }
+                  }
+                }
+              }
+            }
+          }
+
+          where-each (player) {
+            spoken-summary {
+              template("[#{value(player.name)}]")  //TODO: replace with a dialog that naturally summarizes the player
+            }
+            layout-macro (player-summary-card) {
+              param (player) {
+                expression (player)
+              }
+            }
+          }
+        }
+    }
+  }
+  

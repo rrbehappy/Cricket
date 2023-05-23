@@ -1,0 +1,12 @@
+dialog (Result) {
+  match {
+    Player (this) {
+      from-output: FindPlayer(find)
+    }
+  }
+  template-macro (RESULT) {
+    param (concept) {
+      expression (this)
+    }
+  }
+}

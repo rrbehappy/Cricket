@@ -1,0 +1,31 @@
+action (FindPlayer) {
+  type (Search)
+  collect {
+    input (name) {
+      type (Name)
+      min (Optional)
+      max (One)
+    }
+    input (imageId) {
+      type (ImageId)
+      min (Optional)
+      max (One)
+    }
+    input (id) {
+      type (Id)
+      min (Optional)
+      max (One)
+    }
+    input (battingStyle) {
+      type (BattingStyle)
+      min (Optional)
+      max (One)
+    }
+    input (bowlingStyle) {
+      type (BowlingStyle)
+      min (Optional)
+      max (One)
+    }
+  }
+  output (Player)
+}

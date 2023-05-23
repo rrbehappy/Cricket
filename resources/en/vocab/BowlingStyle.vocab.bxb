@@ -1,0 +1,9 @@
+vocab (BowlingStyle){
+    "Right-arm medium"
+    "Right-arm offbreak"
+    "Right-arm legbreak"
+    "Right-arm fast-medium"
+    "Left-arm orthodox"
+    "Right-arm fast"
+    "Left-arm chinaman"
+}

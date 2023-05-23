@@ -1,0 +1,10 @@
+endpoints {
+  
+  action-endpoints {
+
+    action-endpoint (FindPlayer) {
+      accepted-inputs (name, imageId, id, battingStyle, bowlingStyle)
+      local-endpoint ("FindPlayer.js")
+    }
+  }
+}

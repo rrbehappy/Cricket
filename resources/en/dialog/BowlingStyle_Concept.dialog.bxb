@@ -1,0 +1,13 @@
+dialog (Concept) {
+  match {
+    BowlingStyle (this)
+  }
+  switch (plural(this)) {
+    case (One) {
+      template (bowling style)
+    }
+    default {
+      template (bowling styles)
+    }
+  }
+}

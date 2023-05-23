@@ -1,0 +1,13 @@
+dialog (Concept) {
+  match {
+    BattingStyle (this)
+  }
+  switch (plural(this)) {
+    case (One) {
+      template (batting style)
+    }
+    default {
+      template (batting styles)
+    }
+  }
+}

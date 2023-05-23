@@ -1,0 +1,31 @@
+layout-macro-def (player-summary-card) {
+    params {
+      param (player) {
+        type (Player)
+        min (Optional) max (One)
+      }
+      param (titleLabel) {
+        type (viv.core.Text)
+        min (Optional) max (One)
+      }
+    }
+    content {
+      cell-card {
+        slot2 {
+          content {
+            primary {
+              template ("[#{raw(titleLabel)}: ][#{value(player.name)}]")
+            }
+            
+          }
+        }
+        slot3 {
+          label {
+            value {
+              template ("")
+            }
+          }
+        }
+      }
+    }
+  }
